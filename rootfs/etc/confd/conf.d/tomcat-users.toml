@@ -1,0 +1,7 @@
+[template]
+src = "tomcat-users.xml.tmpl"
+dest = "/opt/tomcat/conf/tomcat-users.xml"
+prefix= "/tomcat"
+uid = 100
+gid = 1000
+keys = ["/admin/user", "/admin/password"]

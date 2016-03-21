@@ -1,0 +1,24 @@
+#!/usr/bin/execlineb -P
+# -*- mode: sh -*-
+# vi: set ft=sh :
+with-contenv
+# Check to see if required enviroment variables were provided, and set defaults.
+multisubstitute
+{
+  import -D admin TOMCAT_ADMIN_USER
+  import -i TOMCAT_ADMIN_PASSWORD
+  import -D "" JAVA_OPTS
+  import -D "" CATALINA_OPTS
+}
+foreground {
+    # We add / update the environment defined for the container,
+    # this allows our other initialization and service scripts
+    # use these settings; but does not change the existing
+    # enviroment as seen by linked containers.
+    s6-env -i
+    TOMCAT_ADMIN_USER=$TOMCAT_ADMIN_USER
+    TOMCAT_ADMIN_PASSWORD=$TOMCAT_ADMIN_PASSWORD
+    JAVA_OPTS=$JAVA_OPTS
+    CATALINA_OPTS=$CATALINA_OPTS
+    s6-dumpenv -- /var/run/s6/container_environment
+}

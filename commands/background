@@ -1,0 +1,24 @@
+#!/bin/bash
+set -u
+set -e
+readonly DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+random_password() {
+    < /dev/urandom tr -dc _A-Za-z0-9 | head -c${1:-32}; echo;
+}
+
+main() {
+    local port=${1:-8080}
+    local password=${2:-$(random_password)}
+    local ip=$(curl -s http://whatismijnip.nl |cut -d " " -f 5)
+    cat <<EOF
+#########################################################
+# http://$ip:$port
+# TOMCAT_ADMIN_USER: admin
+# TOMCAT_ADMIN_PASSWORD: $password
+#########################################################
+Docker Container ID:
+EOF
+    docker run -d -p $port:8080 -e TOMCAT_ADMIN_PASSWORD=$password islandora-claw/tomcat
+}
+main "$@"
