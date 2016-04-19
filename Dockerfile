@@ -1,4 +1,4 @@
-FROM islandora-claw/open-jdk
+FROM islandora/claw-open-jdk
 MAINTAINER Nigel Banks <nigel.g.banks@gmail.com>
 
 LABEL "License"="MIT" \
