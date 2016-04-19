@@ -4,7 +4,7 @@ MAINTAINER Nigel Banks <nigel.g.banks@gmail.com>
 LABEL "License"="MIT" \
       "Version"="0.0.1"
 
-ARG TOMCAT_VERSION="7.0.68"
+ARG TOMCAT_VERSION="7.0.69"
 
 EXPOSE 8080
 
