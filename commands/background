@@ -19,6 +19,6 @@ main() {
 #########################################################
 Docker Container ID:
 EOF
-    docker run -d -p $port:8080 -e TOMCAT_ADMIN_PASSWORD=$password islandora-claw/tomcat
+    docker run -d -p $port:8080 -e TOMCAT_ADMIN_PASSWORD=$password islandora/claw-tomcat
 }
 main "$@"

@@ -1,9 +1,9 @@
 # Islandora CLAW: Tomcat Docker Image
 
-[![Docker Stars](https://img.shields.io/docker/stars/islandora-claw/tomcat.svg)](https://hub.docker.com/r/islandora-claw/tomcat/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/islandora-claw/tomcat.svg)](https://hub.docker.com/r/islandora-claw/tomcat/)
-[![Image Size](https://img.shields.io/imagelayers/image-size/islandora-claw/tomcat/latest.svg)](https://imagelayers.io/?images=islandora-claw/tomcat:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/islandora-claw/tomcat/latest.svg)](https://imagelayers.io/?images=islandora-claw/tomcat:latest)
+[![Docker Stars](https://img.shields.io/docker/stars/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
+[![Image Size](https://img.shields.io/imagelayers/image-size/islandora/claw-tomcat/latest.svg)](https://imagelayers.io/?images=islandora/claw-tomcat:latest)
+[![Image Layers](https://img.shields.io/imagelayers/layers/islandora/claw-tomcat/latest.svg)](https://imagelayers.io/?images=islandora/claw-tomcat:latest)
 
 ### Introduction
 
@@ -27,7 +27,7 @@ the
 
 **Example:**
 ```bash
-docker build --build-arg "TOMCAT_VERSION=7.0.68" -t islandora-claw/tomcat .
+docker build --build-arg "TOMCAT_VERSION=7.0.68" -t islandora/claw-tomcat .
 ```
 
 ### Environment Variables
@@ -41,7 +41,7 @@ docker build --build-arg "TOMCAT_VERSION=7.0.68" -t islandora-claw/tomcat .
 
 **Example (foreground, port 8080, auto-remove):**
 ```bash
-docker run --rm -ti -p 8080:8080 -e "TOMCAT_ADMIN_PASSWORD=your_super_secure_password" islandora-claw/tomcat
+docker run --rm -ti -p 8080:8080 -e "TOMCAT_ADMIN_PASSWORD=your_super_secure_password" islandora/claw-tomcat
 ```
 
 ### Commands
