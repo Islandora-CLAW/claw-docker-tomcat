@@ -2,24 +2,19 @@
 
 [![Docker Stars](https://img.shields.io/docker/stars/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
-[![Image Size](https://img.shields.io/imagelayers/image-size/islandora/claw-tomcat/latest.svg)](https://imagelayers.io/?images=islandora/claw-tomcat:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/islandora/claw-tomcat/latest.svg)](https://imagelayers.io/?images=islandora/claw-tomcat:latest)
 
-### Introduction
+## Introduction
 
 Defines the Tomcat Docker image. 
 
-Based on either the
-[Open JDK Docker Image](https://github.com/Islandora-CLAW/docker-open-jdk) or
-the
-[Oracle JDK Docker Image](https://github.com/Islandora-CLAW/docker-oracle-jdk).
+Based on [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk).
 
-### Includes
+## Includes
 
 * Tomcat 7
 * Java 8 (Oracle or Open JDK)
 
-### Build Arguments
+## Build Arguments
 
 | Variable       | Required | Default |
 |----------------|----------|---------|
@@ -30,7 +25,7 @@ the
 docker build --build-arg "TOMCAT_VERSION=7.0.68" -t islandora/claw-tomcat .
 ```
 
-### Environment Variables
+## Environment Variables
 
 | Variable              | Required | Default                                                                                              |
 |-----------------------|----------|------------------------------------------------------------------------------------------------------|
@@ -44,7 +39,7 @@ docker build --build-arg "TOMCAT_VERSION=7.0.68" -t islandora/claw-tomcat .
 docker run --rm -ti -p 8080:8080 -e "TOMCAT_ADMIN_PASSWORD=your_super_secure_password" islandora/claw-tomcat
 ```
 
-### Commands
+## Commands
 
 For convenience a number of commands are provided in the [commands](/commands)
 folder.
@@ -55,12 +50,11 @@ folder.
 | foreground | [port] [admin password] | 8080 random | Start tomcat in the foreground with the given port and password. |
 | background | [port] [admin password] | 8080 random | Start tomcat in the background with the given port and password. |
 
-### Notes
+## Notes
 
-Eventually we will support running on either Open JDK or Oracle JDK, but
-for the moment it only supports Open JDK.
+Eventually we will support running on either OpenJDK or Oracle JDK, but for the moment it only supports OpenJDK.
 
-### Maintainers/Sponsors
+## Maintainers/Sponsors
 
 * UPEI
 * discoverygarden inc.
@@ -77,21 +71,14 @@ for the moment it only supports Open JDK.
 Current maintainers:
 
 * [Nigel Banks](https://github.com/nigelgbanks)
+* [Nick Ruest](https://github.com/ruebot)
 
-### Development
+## Development
 
-If you would like to contribute, please get involved with the
-[Islandora Fedora 4 Interest Group](https://github.com/Islandora/Islandora-Fedora4-Interest-Group).
-We love to hear from you!
+If you would like to contribute, please get involved by attending our weekly [Tech Call](https://github.com/Islandora-CLAW/CLAW/wiki). We love to hear from you!
 
-If you would like to contribute code to the project, you need to be covered by
-an Islandora Foundation
-[Contributor License Agreement](http://islandora.ca/sites/default/files/islandora_cla.pdf)
-or
-[Corporate Contributor Licencse Agreement](http://islandora.ca/sites/default/files/islandora_ccla.pdf).
-Please see the [Contributors](http://islandora.ca/resources/contributors) pages
-on Islandora.ca for more information.
+If you would like to contribute code to the project, you need to be covered by an Islandora Foundation [Contributor License Agreement](http://islandora.ca/sites/default/files/islandora_cla.pdf) or [Corporate Contributor Licencse Agreement](http://islandora.ca/sites/default/files/islandora_ccla.pdf). Please see the [Contributors](http://islandora.ca/resources/contributors) pages on Islandora.ca for more information.
 
-### License
+## License
 
 [MIT](https://opensource.org/licenses/MIT)
