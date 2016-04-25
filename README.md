@@ -7,7 +7,7 @@
 
 Defines the Tomcat Docker image. 
 
-Based on either the [Open JDK Docker Image](https://github.com/Islandora-CLAW/docker-open-jdk) or the [Oracle JDK Docker Image](https://github.com/Islandora-CLAW/docker-oracle-jdk).
+Based on either the [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk).
 
 ## Includes
 
@@ -52,7 +52,7 @@ folder.
 
 ## Notes
 
-Eventually we will support running on either Open JDK or Oracle JDK, but for the moment it only supports OpenJDK.
+Eventually we will support running on either OpenJDK or Oracle JDK, but for the moment it only supports OpenJDK.
 
 ## Maintainers/Sponsors
 
