@@ -7,7 +7,7 @@
 
 Defines the Tomcat Docker image. 
 
-Based on either the [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk).
+Based on [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk).
 
 ## Includes
 
