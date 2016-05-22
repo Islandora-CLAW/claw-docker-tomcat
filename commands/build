@@ -1,3 +1,6 @@
 #!/bin/bash
-readonly DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-docker build -t islandora/claw-tomcat $DIR/..
+readonly ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+docker build -f $ROOT/Dockerfile.oracle-jdk -t islandora/claw-tomcat:oracle-jdk $ROOT
+docker build -f $ROOT/Dockerfile.open-jdk -t islandora/claw-tomcat:open-jdk $ROOT
+# Open JDK is the default implementation. 
+docker tag islandora/claw-tomcat:open-jdk islandora/claw-tomcat:latest

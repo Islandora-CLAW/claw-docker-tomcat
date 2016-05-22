@@ -7,7 +7,8 @@
 
 Defines the Tomcat Docker image. 
 
-Based on [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk).
+Based on either [OpenJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-open-jdk) or
+[OracleJDK Docker Image](https://github.com/Islandora-CLAW/claw-docker-oracle-jdk).
 
 ## Includes
 
@@ -49,10 +50,6 @@ folder.
 | build      |                         |             | Build this image with the default settings.                      |
 | foreground | [port] [admin password] | 8080 random | Start tomcat in the foreground with the given port and password. |
 | background | [port] [admin password] | 8080 random | Start tomcat in the background with the given port and password. |
-
-## Notes
-
-Eventually we will support running on either OpenJDK or Oracle JDK, but for the moment it only supports OpenJDK.
 
 ## Maintainers/Sponsors
 
