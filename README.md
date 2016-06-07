@@ -2,6 +2,8 @@
 
 [![Docker Stars](https://img.shields.io/docker/stars/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/islandora/claw-tomcat.svg)](https://hub.docker.com/r/islandora/claw-tomcat/)
+[![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](./LICENSE)
 
 ## Introduction
 
