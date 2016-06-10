@@ -1,1 +1,1 @@
-Dockerfile.open-jdk
+Dockerfile.oracle-jdk
